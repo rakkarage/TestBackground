@@ -10,8 +10,9 @@ const _reset := -1024
 func _process(delta) -> void:
 	_sprite1.position.x += _speed * delta
 	_sprite2.position.x += _speed * delta
-	if _sprite1.position.x > _size:
-		_sprite1.position.x = _reset
-	if _sprite2.position.x > _size:
-		_sprite2.position.x = _reset
-	pass
+	if _sprite1.position.x >= _size:
+		var add = _sprite1.position.x - _size
+		_sprite1.position.x = _reset + add
+	if _sprite2.position.x >= _size:
+		var add = _sprite2.position.x - _size
+		_sprite2.position.x = _reset + add
