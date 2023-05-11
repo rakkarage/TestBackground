@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://binioejjbjqbk"]
+
+[ext_resource type="Texture2D" uid="uid://cnpwd0glm3xif" path="res://sky.png" id="1_7okmp"]
+[ext_resource type="Script" path="res://Test.gd" id="1_rqxnx"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rqxnx")
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+texture = ExtResource("1_7okmp")
+centered = false
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(-1024, 0)
+texture = ExtResource("1_7okmp")
+centered = false
